@@ -7,17 +7,17 @@ public class Song
     // Properties 
     public int Id { get; set; } // Primärnyckel 
     // Artist
-    [Required]
+    [Required(ErrorMessage = "Ange artist")]
     public string? Artist { get; set; }
 
     // Låttitel
-    [Required]
+    [Required(ErrorMessage = "Ange titel på låten")]
     public string? Title { get; set; }
 
     // Låtlängd
     public int Length { get; set; }
 
     // Kategori
-    [Required]
+    [Required(ErrorMessage = "Ange vilken kategori låten tillhör")]
     public string? Category { get; set; }
 }
